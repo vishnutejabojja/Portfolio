@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import LiquidGradientWrapper from "./LiquidGradientWrapper";
 
 const projects = [
   {
@@ -38,7 +39,9 @@ export const ProjectsSection = () => {
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Featured <span className=""><LiquidGradientWrapper asText className="inline-block">
+                      Projects
+                        </LiquidGradientWrapper> </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -97,13 +100,13 @@ export const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/machadop1407"
-          >
-            Check My Github <ArrowRight size={16} />
-          </a>
+          <LiquidGradientWrapper className="inline-block rounded-full">
+                         <button
+                          className="px-6 py-2 rounded-full duration-300 hover:opacity-80"
+                        >
+                          Check My Github <span className="inline-block pt-1.5"><ArrowRight size={16} /> </span>
+                        </button>
+                        </LiquidGradientWrapper>
         </div>
       </div>
     </section>

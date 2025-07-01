@@ -11,6 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import LiquidGradientWrapper from "./LiquidGradientWrapper";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -33,7 +34,12 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+          Get In <span className=""> 
+            <LiquidGradientWrapper asText className="inline-block">
+            Touch
+                          </LiquidGradientWrapper>
+            
+            </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -50,41 +56,47 @@ export const ContactSection = () => {
 
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
+                <div className="p-3 rounded-full">
+                <LiquidGradientWrapper className="rounded-full p-2">
+                  <Mail className="h-6 w-6" />{" "}
+                  </LiquidGradientWrapper>
                 </div>
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
                     href="mailto:hello@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground transition-colors"
                   >
-                    hello@gmail.com
+                    vishnuteja20601@gmail.com
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+              {/* <div className="flex items-start space-x-4">
+                <div className="p-3 rounded-full">
+                <LiquidGradientWrapper className="rounded-full p-2">
+                  <Phone className="h-6 w-6" />{" "}
+                  </LiquidGradientWrapper>
                 </div>
                 <div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
                     href="tel:+11234567890"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground transition-colors"
                   >
                     +1 (123) 456-7890
                   </a>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
+                <div className="p-3 rounded-full">
+                <LiquidGradientWrapper className="rounded-full p-2">
+                  <MapPin className="h-6 w-6" />{" "}
+                  </LiquidGradientWrapper>
                 </div>
                 <div>
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                   Hyderabad, India
                   </a>
                 </div>
               </div>
@@ -130,7 +142,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="Name..."
                 />
               </div>
 
@@ -148,7 +160,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="me@gmail.com"
                 />
               </div>
 
@@ -168,17 +180,19 @@ export const ContactSection = () => {
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
-
+<LiquidGradientWrapper className="inline-block rounded-full">
+                         
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "w-full flex items-center justify-center gap-2 px-6 py-2 rounded-full duration-300 hover:opacity-80"
                 )}
-              >
+                >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
+                </LiquidGradientWrapper>
             </form>
           </div>
         </div>

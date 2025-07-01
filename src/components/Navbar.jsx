@@ -34,10 +34,15 @@ export const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
-          <span className="relative z-10">
+          {/* <img
+            src="/vt-high-resolution-logo-transparent.png"
+            alt="Vishnu Teja Logo"
+            className="h-16 w-16 mr-2"
+          /> */}
+          {/* <span className="relative z-10">
             <span className="text-glow text-foreground"> PedroTech </span>{" "}
             Portfolio
-          </span>
+          </span> */}
         </a>
 
         {/* desktop nav */}
