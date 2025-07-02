@@ -23,10 +23,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Advanced Trade Reconcillation System",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
+      "Robust and consitent python system to collect data from apis and check data across multiple sources.",
+    image: "/projects/trade_recon_1.png",
     tags: ["React", "Node.js", "Stripe"],
     demoUrl: "#",
     githubUrl: "#",
