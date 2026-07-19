@@ -10,8 +10,12 @@ function App() {
       <Toaster />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="/GeoMark/privacy-policy" element={<PrivacyPolicy />} />
+          {/* Use path="/" instead of index at the root level */}
+          <Route path="/" element={<Home />} />
+          
+          {/* Use lowercase URLs for best web practices */}
+          <Route path="/geomark/privacypolicy" element={<PrivacyPolicy />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
